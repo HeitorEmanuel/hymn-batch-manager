@@ -9,6 +9,10 @@ Aplicação desktop local para Windows que transforma listas de hinos em repert�
 
 Ela não é um “baixador universal”, não contorna DRM, autenticação, paywalls ou limitações de plataformas.
 
+## Download para Windows
+
+Baixe a versão portátil na página de [releases do GitHub](https://github.com/HeitorEmanuel/hymn-batch-manager/releases/latest). Extraia o ZIP inteiro e execute `HymnBatchManager.exe` — não mova somente o `.exe`, pois a pasta `_internal` faz parte do aplicativo.
+
 ## Funcionalidades atuais
 
 - Janela principal em português do Brasil, navegação lateral e temas claro/escuro.
