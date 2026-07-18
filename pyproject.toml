@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hymn-batch-manager"
+version = "0.1.0"
+description = "Gerenciador desktop local de repertórios e mídias autorizadas."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Hymn Batch Manager contributors" }]
+dependencies = [
+  "alembic>=1.14,<2",
+  "httpx>=0.28,<1",
+  "mutagen>=1.47,<2",
+  "platformdirs>=4.3,<5",
+  "Pillow>=11,<13",
+  "PySide6>=6.8,<7",
+  "rapidfuzz>=3.10,<4",
+  "SQLAlchemy>=2.0,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.14,<2",
+  "pytest>=8.3,<10",
+  "pytest-qt>=4.4,<5",
+  "ruff>=0.9,<1",
+]
+build = ["pyinstaller>=6.11,<7"]
+
+[project.scripts]
+hymn-batch-manager = "app.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"app/ui/styles.py" = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+qt_api = "pyside6"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["app"]
+exclude = ["migrations"]

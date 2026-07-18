@@ -1,0 +1,1 @@
+"""Utilitários seguros e reutilizáveis."""

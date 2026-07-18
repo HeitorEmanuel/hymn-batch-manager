@@ -1,0 +1,30 @@
+name: Relatar problema
+description: Informe um comportamento reproduzível.
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão e Windows
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacidade
+      options:
+        - label: Removi tokens, links assinados e dados privados dos logs.
+          required: true
+
