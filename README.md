@@ -13,6 +13,10 @@ Ela não é um “baixador universal”, não contorna DRM, autenticação, payw
 
 Baixe a versão portátil na página de [releases do GitHub](https://github.com/HeitorEmanuel/hymn-batch-manager/releases/latest). Extraia o ZIP inteiro e execute `HymnBatchManager.exe` — não mova somente o `.exe`, pois a pasta `_internal` faz parte do aplicativo.
 
+## Versão web
+
+A versão web pode ser usada em [hymn-batch-manager.heitoremanuelamorim.chatgpt.site](https://hymn-batch-manager.heitoremanuelamorim.chatgpt.site). Ela organiza, deduplica, reordena, salva localmente e exporta repertórios sem enviar a lista para um servidor. O código está no repositório [hymn-batch-manager-web](https://github.com/HeitorEmanuel/hymn-batch-manager-web).
+
 ## Funcionalidades atuais
 
 - Janela principal em português do Brasil, navegação lateral e temas claro/escuro.
